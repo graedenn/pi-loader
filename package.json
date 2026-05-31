@@ -18,6 +18,7 @@
     "@earendil-works/pi-tui": "*"
   },
   "pi": {
-    "extensions": ["./index.ts"]
+    "extensions": ["./index.ts"],
+    "video": "https://github.com/graedenn/pi-loader/raw/main/demo/pi-loader-demo.mp4"
   }
 }
