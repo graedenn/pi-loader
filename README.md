@@ -16,7 +16,7 @@ Replaces the default spinner with rich 2-character braille animations. 54+ patte
 ### Via pi (recommended)
 
 ```bash
-pi install git:github.com/graedenn/pi-loader
+pi install npm:@graedenn/pi-loader
 ```
 
 Then `/reload` or restart pi.
