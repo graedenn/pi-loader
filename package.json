@@ -1,0 +1,17 @@
+{
+  "name": "pi-loader",
+  "version": "1.0.0",
+  "description": "Braille-dot working indicator for pi coding agent — replaces the default spinner with 54+ configurable animations",
+  "main": "index.ts",
+  "keywords": ["pi", "coding-agent", "extension", "loader", "spinner", "braille", "dot-matrix"],
+  "license": "MIT",
+  "author": "Graeden",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/graeden/pi-loader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/graeden/pi-loader/issues"
+  },
+  "homepage": "https://github.com/graeden/pi-loader#readme"
+}
