@@ -26,6 +26,10 @@ const cycle = <T>(arr: readonly T[], idx: number, dir: -1 | 1): T =>
 const COLORS = ["accent", "muted", "dim", "text", "success", "warning", "error", "border", "borderAccent"] as const;
 const PREVIEW_COLORS = [...COLORS, "16","39","48","117","123","183","193","202","213","214","228","244","255"] as string[];
 
+function intervalMs(frameCount: number, defaultSpeed: number, speedMultiplier: number): number {
+  return Math.max(80, Math.min(300, 1600 / frameCount)) / (defaultSpeed * speedMultiplier);
+}
+
 function colorize(text: string, color: string, theme: { fg: (c: string, t: string) => string }): string {
   if ((COLORS as readonly string[]).includes(color)) return theme.fg(color, text);
   if (/^#[0-9a-fA-F]{6}$/.test(color)) {
@@ -105,11 +109,11 @@ class LoaderPreviewComponent {
     this.stopAnimation();
     const entry = PATTERNS[this.patternKey];
     if (!entry) return;
-    const intervalMs = Math.max(80, Math.min(300, 1600 / this.frames.length)) / (entry.defaultSpeed * this.speed);
+    const ms = intervalMs(this.frames.length, entry.defaultSpeed, this.speed);
     this.animInterval = setInterval(() => {
       this.frameIndex = (this.frameIndex + 1) % this.frames.length;
       this.tui.requestRender();
-    }, Math.max(16, intervalMs));
+    }, Math.max(16, ms));
   }
 
   private stopAnimation(): void {
@@ -235,7 +239,7 @@ export default function (pi: ExtensionAPI) {
     if (!pattern || !pattern.frames.length) return;
     ctx.ui.setWorkingIndicator({
       frames: pattern.frames.map((f) => colorize(f, config.color, ctx.ui.theme)),
-      intervalMs: Math.max(80, Math.min(300, 1600 / pattern.frames.length)) / config.speed,
+      intervalMs: intervalMs(pattern.frames.length, pattern.defaultSpeed, config.speed),
     });
   };
 
@@ -298,7 +302,6 @@ export default function (pi: ExtensionAPI) {
             return;
           }
           config.pattern = key;
-          config.speed = PATTERNS[key]!.defaultSpeed;
           saveConfig(config);
           apply(ctx);
           ctx.ui.notify(`Pattern → ${PATTERNS[key]!.name}`, "info");
