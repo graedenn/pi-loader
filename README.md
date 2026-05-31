@@ -7,7 +7,7 @@ Replaces the default spinner with rich 2-character braille animations. 54+ patte
 ![preview](https://img.shields.io/badge/patterns-54+-brightgreen)
 ![license](https://img.shields.io/badge/license-MIT-blue)
 
-<video src="https://github.com/graedenn/pi-loader/raw/main/demo/pi-loader-demo.mp4" controls width="720"></video>
+![pi-loader demo](demo/pi-loader-demo.gif)
 
 > *Demo: preview gallery, pattern switching, speed & color controls*
 
