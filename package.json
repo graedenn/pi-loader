@@ -1,8 +1,17 @@
 {
   "name": "@graedenn/pi-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Braille-dot working indicator for pi coding agent — replaces the default spinner with 54+ configurable animations",
-  "keywords": ["pi-package", "pi", "coding-agent", "extension", "loader", "spinner", "braille", "dot-matrix"],
+  "keywords": [
+    "pi-package",
+    "pi",
+    "coding-agent",
+    "extension",
+    "loader",
+    "spinner",
+    "braille",
+    "dot-matrix"
+  ],
   "license": "MIT",
   "author": "Graeden",
   "repository": {
@@ -18,6 +27,8 @@
     "@earendil-works/pi-tui": "*"
   },
   "pi": {
-    "extensions": ["./index.ts"]
+    "extensions": [
+      "./index.ts"
+    ]
   }
 }
