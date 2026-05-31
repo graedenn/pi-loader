@@ -1,6 +1,6 @@
 {
   "name": "@graedenn/pi-loader",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Braille-dot working indicator for pi coding agent — replaces the default spinner with 54+ configurable animations",
   "keywords": [
     "pi-package",
