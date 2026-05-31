@@ -9,14 +9,21 @@ Replaces the default spinner with rich 2-character braille animations. 54+ patte
 
 ## Installation
 
-Place in your pi extensions directory:
+### Via pi (recommended)
+
+```bash
+pi install git:github.com/graedenn/pi-loader
+```
+
+Then `/reload` or restart pi.
+
+### Manual
 
 ```bash
 mkdir -p ~/.pi/agent/extensions/pi-loader
 cp index.ts patterns.ts ~/.pi/agent/extensions/pi-loader/
+/reload
 ```
-
-Then run `/reload` in pi.
 
 ## Usage
 
