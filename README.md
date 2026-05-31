@@ -1,6 +1,6 @@
 # pi-loader ⠿
 
-**Braille-dot working indicator for [pi coding agent](https://github.com/graeden/pi-coding-agent).**
+**Braille-dot working indicator for pi coding agent.**
 
 Replaces the default spinner with rich 2-character braille animations. 54+ patterns including helixes, neural flickers, sweeps, snakes, and more — all in pure ASCII-compatible Unicode braille.
 

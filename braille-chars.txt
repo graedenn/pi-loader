@@ -1,4 +1,4 @@
-BRAILLE CHARACTER REFERENCE for the 4×4 Dot Matrix Loader
+BRAILLE CHARACTER REFERENCE for pi-loader (4×4 braille dot loader)
 =========================================================
 
 Each loader frame is 2 braille characters, side by side.
